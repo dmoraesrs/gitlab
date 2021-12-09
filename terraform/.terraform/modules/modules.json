@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"instance_template","Source":"terraform-google-modules/vm/google//modules/instance_template","Version":"7.3.0","Dir":".terraform/modules/instance_template/modules/instance_template"}]}

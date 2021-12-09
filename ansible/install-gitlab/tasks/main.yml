@@ -1,0 +1,3 @@
+---
+# tasks file for install-gitlab
+- import_tasks: setup.yml
