@@ -1,0 +1,5 @@
+- hosts: all
+  become: yes
+  user: dmoraes
+  roles:
+  - { role: install-gitlab, tags: ["install_lab"]}
