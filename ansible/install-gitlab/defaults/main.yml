@@ -1,7 +1,7 @@
 ---
 # General config.
-gitlab_domain: hygiabank.com.br
-gitlab_external_url: "https://{{ gitlab_domain }}/"
+gitlab_domain: git-corp.hygiabank.com.br
+gitlab_external_url: "http://{{ gitlab_domain }}/"
 gitlab_git_data_dir: "/var/opt/gitlab/git-data"
 gitlab_edition: "gitlab-ce"
 gitlab_version: ''
@@ -9,12 +9,12 @@ gitlab_backup_path: "/var/opt/gitlab/backups"
 gitlab_config_template: "gitlab.rb.j2"
 
 # SSL Configuration.
-gitlab_redirect_http_to_https: true
+gitlab_redirect_http_to_https: false
 gitlab_ssl_certificate: "/etc/gitlab/ssl/{{ gitlab_domain }}.crt"
 gitlab_ssl_certificate_key: "/etc/gitlab/ssl/{{ gitlab_domain }}.key"
 
 # SSL Self-signed Certificate Configuration.
-gitlab_create_self_signed_cert: true
+gitlab_create_self_signed_cert: false
 gitlab_self_signed_cert_subj: "/C=BR/ST=Rio Grande do Sul/L=Porto Alegre/O=IT/CN={{ gitlab_domain }}"
 
 # LDAP Configuration.
@@ -35,7 +35,7 @@ gitlab_smtp_user_name: "smtp user"
 gitlab_smtp_password: "smtp password"
 gitlab_smtp_domain: "example.com"
 gitlab_smtp_authentication: "login"
-gitlab_smtp_enable_starttls_auto: true
+gitlab_smtp_enable_starttls_auto: false
 gitlab_smtp_tls: false
 gitlab_smtp_openssl_verify_mode: "none"
 gitlab_smtp_ca_path: "/etc/ssl/certs"
@@ -59,7 +59,7 @@ gitlab_dependencies:
 # Optional settings.
 gitlab_time_zone: "America/Sao_Paulo"
 gitlab_backup_keep_time: "604800"
-gitlab_download_validate_certs: true
+gitlab_download_validate_certs: false
 gitlab_default_theme: '2'
 
 # Email configuration.
@@ -70,7 +70,7 @@ gitlab_email_reply_to: "gitlab@example.com"
 
 # Registry configuration.
 gitlab_registry_enable: false
-gitlab_registry_external_url: "https://gitlab.example.com:4567"
+gitlab_registry_external_url: "http://gitlab.example.com:4567"
 gitlab_registry_nginx_ssl_certificate: "/etc/gitlab/ssl/gitlab.crt"
 gitlab_registry_nginx_ssl_certificate_key: "/etc/gitlab/ssl/gitlab.key"
 
